@@ -1,0 +1,21 @@
+﻿@page "/todo"
+@using pTodo.Shared.Services
+@inherits TodoBase
+
+<h3>Test</h3>
+
+<br />
+
+<FluentButton Appearance=Appearance.Accent @onclick="(() => {Hidden = false;})">Open dialog</FluentButton>
+
+@* DIALOG *@
+<FluentDialog @bind-Hidden="@Hidden" Modal=@_modal @ondialogdismiss=OnClick_Close>
+    <FluentDialogHeader Visible="false" />
+    <h2>Just a simple dialog</h2>
+    <p>The 'Close dialog' button is automatically focused.</p>
+    <p>The 'Another button' doesn't do anything other than showing it can receive focus.</p>
+    <p>The width, height and padding of the dialog are customized in (isolated) CSS</p>
+    <FluentButton Appearance="Appearance.Accent" Autofocus="true" @onclick="OnClick_Close">Close dialog</FluentButton>
+    <FluentButton>Another button</FluentButton>
+</FluentDialog>
+

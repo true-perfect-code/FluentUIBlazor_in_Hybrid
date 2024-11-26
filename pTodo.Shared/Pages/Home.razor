@@ -1,0 +1,16 @@
+﻿@page "/"
+@page "/{error}"
+
+@inherits HomeBase
+
+@using pTodo.Shared.Components.Pages
+
+
+@if (1 == 1)
+{
+    <Todo />
+}
+else
+{
+    <Index />
+}

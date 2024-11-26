@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pTodo", "pTodo\pTodo.csproj", "{1D328B02-61F2-46B0-B4EA-767CBEC07F85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pTodo.Shared", "pTodo.Shared\pTodo.Shared.csproj", "{C015F609-BB3C-4DFE-ACDC-81D2E4C75BBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pTodo.Web", "pTodo.Web\pTodo.Web.csproj", "{EF56F627-7612-42F7-8240-C5889BC3D0AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D328B02-61F2-46B0-B4EA-767CBEC07F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D328B02-61F2-46B0-B4EA-767CBEC07F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D328B02-61F2-46B0-B4EA-767CBEC07F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D328B02-61F2-46B0-B4EA-767CBEC07F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C015F609-BB3C-4DFE-ACDC-81D2E4C75BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C015F609-BB3C-4DFE-ACDC-81D2E4C75BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C015F609-BB3C-4DFE-ACDC-81D2E4C75BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C015F609-BB3C-4DFE-ACDC-81D2E4C75BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF56F627-7612-42F7-8240-C5889BC3D0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF56F627-7612-42F7-8240-C5889BC3D0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF56F627-7612-42F7-8240-C5889BC3D0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF56F627-7612-42F7-8240-C5889BC3D0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

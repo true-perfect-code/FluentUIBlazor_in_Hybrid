@@ -1,0 +1,70 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+<FluentCard>
+    <h2>Hello World!</h2>
+    <FluentButton Appearance="@Appearance.Accent">Click Me</FluentButton>
+</FluentCard>
+
+<br />
+
+<FluentDialog @ref="_myFluentDialog" @bind-Hidden="@Hidden" aria-label="Simple dialog" Modal=@_modal TrapFocus=@_trapFocus PreventScroll=@_preventScroll @ondialogdismiss=OnDismiss>
+    <FluentDialogHeader Visible="false" />
+    <h2>Just a simple dialog</h2>
+    <p>The 'Close dialog' button is automatically focused.</p>
+    <p>The 'Another button' doesn't do anything other than showing it can receive focus.</p>
+    <p>The width, height and padding of the dialog are customized in (isolated) CSS</p>
+    <FluentButton Appearance="Appearance.Accent" Autofocus="true" @onclick="OnClose">Close dialog</FluentButton>
+    <FluentButton>Another button</FluentButton>
+        
+</FluentDialog>
+
+<FluentButton Appearance=Appearance.Accent @onclick="OnOpen">Open dialog</FluentButton>
+
+@code {
+    private FluentDialog? _myFluentDialog;
+    private bool _trapFocus = true;
+    private bool _modal = true;
+    private bool _preventScroll = true;
+    private string? _status;
+    private bool Hidden { get; set; } = true;
+
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void OnOpen()
+    {
+        _status = "Dialog opened with button click";
+        _myFluentDialog!.Show();
+        //DemoLogger.WriteLine(_status);
+    }
+
+    private void OnClose()
+    {
+        _status = $"Dialog dismissed with reason: Close button clicked";
+        _myFluentDialog!.Hide();
+        //DemoLogger.WriteLine(_status);
+    }
+
+    private void OnDismiss(DialogEventArgs args)
+    {
+        if (args is not null && args.Reason is not null && args.Reason == "dismiss")
+        {
+            _status = $"Dialog dismissed with reason: Dismissed";
+            _myFluentDialog!.Hide();
+            //DemoLogger.WriteLine(_status);
+        }
+    }
+}
