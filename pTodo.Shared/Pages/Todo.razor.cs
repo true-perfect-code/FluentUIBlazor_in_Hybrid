@@ -16,6 +16,9 @@ namespace pTodo.Shared.Pages
         [Inject]
         AuthenticationStateProvider? authenticationStateProvider { get; set; }
 
+        [Inject]
+        IToastService toastService { get; set; }
+
         protected bool Hidden = true;
         protected bool _modal = true;
 
@@ -35,6 +38,11 @@ namespace pTodo.Shared.Pages
 
 
         #region FORM_EVENTS
+
+        protected void OnClick_OpenToast()
+        {
+            toastService!.ShowSuccess("Successfully open FluentUI Blazor toast.", 3);
+        }
 
         protected void onClick_Add()
         {

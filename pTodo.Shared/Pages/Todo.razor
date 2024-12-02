@@ -8,6 +8,8 @@
 
 <FluentButton Appearance=Appearance.Accent @onclick="(() => {Hidden = false;})">Open dialog</FluentButton>
 
+<FluentButton Appearance=Appearance.Accent @onclick="OnClick_OpenToast">Open toast</FluentButton>
+
 @* DIALOG *@
 <FluentDialog @bind-Hidden="@Hidden" Modal=@_modal @ondialogdismiss=OnClick_Close>
     <FluentDialogHeader Visible="false" />
